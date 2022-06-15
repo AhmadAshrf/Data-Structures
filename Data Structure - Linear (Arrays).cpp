@@ -16,7 +16,6 @@ public :
 		myArr = new int[arrSize];
 	};
 
-
 	//Operations on Arrays
 	//1- Fill
 	void Fill(){
@@ -49,6 +48,7 @@ public :
 		return index;
 	};
 
+	//3- Appending
 	void append(int newItem){
 		if (length < size){
 			myArr[length] = newItem;
@@ -59,7 +59,7 @@ public :
 		}
 	}
 
-	//3- Insertion
+	//4- Insertion
 	void insert(int index, int newItem){
 		if (index >= 0 && index < size){
 			for (int i = length; i > index; i--){
@@ -73,8 +73,7 @@ public :
 		}
 	};
 
-
-	//4- Deletion
+	//5- Deletion
 	void remove(int index){
 		if (index >= 0 && index < size){
 			for (int i = index; i < length - 1; i++){
@@ -87,7 +86,7 @@ public :
 		}
 	}
 
-	//5- Increase Array Size
+	//6- Increase Array Size
 	void enLarge(int newIndex){
 		if (newIndex <= size){
 			cout << "the new size must be larger than current size\n" ;
@@ -104,7 +103,7 @@ public :
 		};
 	};
 
-	//6- Merge two Arrays
+	//7- Merge two Arrays
 	void merge(Array other){
 		int newSize = size + other.getSize();
 		size = newSize;
@@ -122,7 +121,7 @@ public :
 		};
 	};
 
-	//7- Display Array Items
+	//8- Display Array Items
 	void Diplay(){
 		cout << "Display Array Items\n";
 		for (int i = 0; i < length; i++){
@@ -131,12 +130,12 @@ public :
 		cout << endl;
 	};
 
-	//8- Get Array Size
+	//9- Get Array Size
 	int getSize(){
 		return size;
 	};
 
-	//9- Get Array Length
+	//10- Get Array Length
 	int getLength(){
 		return length;
 	};
